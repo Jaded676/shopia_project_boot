@@ -1,0 +1,79 @@
+
+
+.navegacion {
+
+
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+
+a {
+  text-decoration: none;
+  @text-color: @black-50;
+
+}
+.navegacion2 {
+
+
+  text-decoration: none;
+
+}
+
+.logo {
+
+  text-align: center;
+}
+
+
+.social {
+
+  text-align: center;
+  padding-right: 2em;
+}
+
+.slider  {
+  text-align: center;
+
+}
+
+
+/* ARTICULOS */
+
+.articulos {
+  display: flex;
+  justify-content: center;
+  margin-top: 120px;
+
+}
+ .div1 , .div3 {
+  display: flex;
+  flex-direction: column;
+ }
+
+/* COLLECTION */
+
+.collection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+
+}
+
+.fila1 , .fila2 {
+  display: flex;
+  padding: 1em;
+  justify-items: center;
+
+}
+
+.collection-1 , .collection-2 ,
+.collection-3 , .collection-4 ,
+.collection-5 , .collection-6 ,
+.collection-7 , ..collection-8 {
+
+
+}
