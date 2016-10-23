@@ -224,10 +224,7 @@ img:hover {
 
 }
 
-.footer .container .row ul li {
-  list-style-type: none;
 
-}
 /*FOOTER*/
 
 .footer-background {
@@ -247,4 +244,9 @@ footer ul li a {
   font-style: normal;
   font-size: 13px;
   color: #efefef;
+}
+
+.footer .container .row ul li {
+  list-style-type: none;
+
 }
