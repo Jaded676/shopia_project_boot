@@ -4,8 +4,12 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+    <link rel=”stylesheet” type=”text/css” href=”http://fonts.googleapis.com/css?family=Lato”>
+    <link rel=”stylesheet” type=”text/css” href=”http://fonts.googleapis.com/css?family=PlayfairDisplay”>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <script type="text/javascript">
@@ -16,67 +20,76 @@
     });
   });
   </script>
-  <title>Prueba bootstrap</title>
+  <title>Shophia_project</title>
   </head>
-  <body>
+  <body ng-app='shophiaApp'>
     <header>
-      <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12">
-          <div class="navegacion">
-            <nav class="navbar-right col-lg-4 col-md-4 col-sm-2 col-lg-offset-2">
-            <h4><a href="#">WELCOME MSG!</a>
-              <a href="#">MY ACCOUNT</a>
-              <a href="#">MY WHISTLIST</a>
-              <a href="#">LOGIN</a></h4>
-            </nav>
-          </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 well">
-
-        </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-4 col-md-4 col-sm-2">
-        <div class="navegacion2">
-          <nav class="navbar-left col-lg-6 col-md-6 col-sm-2 col-lg-offset-2">
-            <h5><a href="#">Home</a>
-            <a href="#">Gallery</a>
-            <a href="#">Categories</a>
-            <a href="#">Page</a></h5>
+    <div class="row nav1">
+        <div class="col-xs-5" style="padding-left: 15em; padding-top:1em;">
+          <nav class="nav pull-left nav-left">
+            <a href="#">Call</a>
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <a href="#">+56952352907</a>
           </nav>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-2">
-        <div class="logo">
-        <img src="img/shopia_logo.jpg" alt="logo" />
+        <div class="col-xs-7" style="padding: 1em;">
+            <nav class="pull-right nav-right">
+              <a href="#">WELCOME MSG!</a>
+              <a href="#">MY ACCOUNT</a>
+              <a href="#">MY WHISTLIST</a>
+              <a href="#">LOGIN</a>
+            </nav>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-4">
-        <div class="social">
-          <img class="social" src="img/fb_icon.jpg" alt="facebook" />
-          <img class="social" src="img/fb_icon.jpg" alt="facebook" />
-          <img class="social" src="img/fb_icon.jpg" alt="facebook" />
-          <img class="social" src="img/fb_icon.jpg" alt="facebook" />
-        </div>
-      </div>
-    </header>
+    </div>
+
     <div class="row">
-      <div class="col-lg-8 col-md-8 col-sm-4 col-lg-offset-2">
-        <div class="slider well">
-            <img src="img/slide.jpg" alt="slider" />
-            <img src="img/slide.jpg" alt="slider" />
-            <img src="img/slide.jpg" alt="slider" />
-            <img src="img/slide.jpg" alt="slider" />
-            <img src="img/slide.jpg" alt="slider" />
+      <div class="col-sm-12 well" style="background-color:white; border:none;"></div>
+    </div>
+  <div class="row nav2">
+      <div class="col-md-5 col-sm-2">
+          <nav class="nav pull-left nav-left" style="padding-left: 2em; padding-top:1em;">
+              <a href="#">Home</a>
+              <a href="#">Gallery</a>
+              <a href="#">Categories</a>
+              <a href="#">Page</a>
+          </nav>
+      </div>
+      <div class="col-md-3 col-sm-6 logo">Shopia</div>
+      <div class=" col-md-4 col-sm-4 pull-right social" style="padding-top:1em; width:20%;">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <i class="fa fa-pinterest" aria-hidden="true"></i>
+      </div>
+  </div>
+</header>
+<main ng-controller='shophiaController'>
+  <div class="row slider-container">
+    <div class="col-sm-8 col-sm-offset-2">
+      <div class="slider well">
+          <img src="img/slide.jpg" alt="slider" />
+          <img src="img/slide.jpg" alt="slider" />
+          <img src="img/slide.jpg" alt="slider" />
+          <img src="img/slide.jpg" alt="slider" />
+          <img src="img/slide.jpg" alt="slider" />
+      </div>
+    </div>
+  </div>
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <div class="promo">
+        <img src="img/sale.jpg" class:"img-responsive" alt="sales" />
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-10 col-md-10 col-sm-5 col-lg-offset-4">
-        <div class="promo">
-        <img src="img/sale.jpg" alt="sales" />
+    <div class="row title-section">
+      <div class="col-xs-12">
+        <div class="title-contain">
+            <div class="rombo" style="margin-right: 2em"></div>
+            <div class="rombo"></div>
+            <p class="title">HandPicked</p>
+            <div class="rombo" style="margin-right: 2em"></div>
+            <div class="rombo"></div>
         </div>
       </div>
     </div>
@@ -103,8 +116,211 @@
         </div>
       </div>
     </div>
+    <div class="row title-section">
+      <div class="col-xs-12">
+        <div class="title-contain">
+            <div class="rombo" style="margin-right: 2em"></div>
+            <div class="rombo"></div>
+            <p class="title">Summer Colletion</p>
+            <div class="rombo" style="margin-right: 2em"></div>
+            <div class="rombo"></div>
+        </div>
+      </div>
+    </div>
+    <div class="collection">
+      <div class="fila1">
+        <div ng-repeat= "imagen in imagenes" class="collection-1">
+          <img ng-src={{imagen.url}} alt="collection-{{imagen.$index+1}}" />
+            <div class="add-cart">
+              ADD CART
+            </div>
+            <div ng-show="imagen.tienePorcentaje" class="descuento">
+              <p style="font-family: Lato; color:white; font-size:1.5em; padding-top:10px;"><strong>{{imagen.porcentaje}}%</strong></p>
+            </div>
+        </div>
+      </div>
+    </div>
+        <!--<div class="collection-1">
+          <img src="img/collection2.jpg" alt="collection-2" />
+        </div>
+        <div class="collection-1">
+          <img src="img/collection3.jpg" alt="collection-3" />
+        </div>
+        <div class="collection-1">
+          <img src="img/collection4.jpg" alt="collection-4" />
+        </div>
+        <div class="collection-1">
+          <img src="img/collection5.jpg" alt="collection-5" />
+        </div>
+        <div class="collection-1">
+          <img src="img/collection6.jpg" alt="collection-6" />
+        </div>
+        <div class="collection-1">
+          <img src="img/collection7.jpg" alt="collection-7" />
+        </div>
+        <div class="collection-1">
+          <img src="img/collection8.jpg" alt="collection-8" />
+        </div>-->
 
+    <div class="row title-section">
+      <div class="col-xs-12">
+        <div class="title-contain">
+            <div class="rombo" style="margin-right: 2em"></div>
+            <div class="rombo"></div>
+            <p class="title">Our Brand</p>
+            <div class="rombo" style="margin-right: 2em"></div>
+            <div class="rombo"></div>
+        </div>
+      </div>
+    </div>
+    <div class="collection">
+      <div class="fila">
+          <div class="brand-1">
+            <img src="img/brand1.jpg" alt="collection-1" />
+          </div>
+        <div class="brand-1">
+          <img src="img/brand2.jpg" alt="collection-2" />
+        </div>
+        <div class="brand-1">
+          <img src="img/brand3.jpg" alt="collection-3" />
+        </div>
+        <div class="brand-1">
+          <img src="img/brand4.jpg" alt="collection-4" />
+        </div>
+        <div class="brand-1">
+          <img src="img/brand5.jpg" alt="collection-4" />
+        </div>
+        <div class="brand-1">
+          <img src="img/brand6.jpg" alt="collection-4" />
+        </div>
+      </div>
+    </div>
+    <div class="row title-section">
+      <div class="col-xs-12">
+        <div class="title-contain">
+            <div class="rombo" style="margin-right: 2em"></div>
+            <div class="rombo"></div>
+            <p class="title">Customers Says</p>
+            <div class="rombo" style="margin-right: 2em"></div>
+            <div class="rombo"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row testimonial-section">
+        <div class="col-xs-12">
+          <img src="img/testimonial.jpg" class="img-responsive" alt="testimonial" />
+        </div>
+    </div>
+</main>
+<footer class="footer footer-background">
+    <div class="container">
+      <div class="row">
+          <div class="col-md-2 col-sm-2 col-xs-6 col-md-offset-1">
+            <h4>SHOP</h4>
+                <ul>
+                  <li><a href='/'>New In</a></li>
+                  <li><a href='tickets.html'>Women</a></li>
+                  <li><a href='stations.html'>Men</a></li>
+                  <li><a href='stations.html'>Shoes</a></li>
+                  <li><a href='stations.html'>Bag & Accessories</a></li>
+                  <li><a href='stations.html'>Top Brands</a></li>
+                  <li><a href='stations.html'>Sale & Special Offers</a></li>
+                  <li><a href='stations.html'>Lookbook</a></li>
+                </ul>
+          </div>
+          <div class='visible-xs clearfix'></div>
+          <div class='col-md-4 col-sm-2 col-xs-6'>
+            <h4>Stay in Touch</h4>
+              <ul>
+                  <li><a href='about.html'>INFORMATION</a></li>
+                  <li><a href='contact.html'>About Us</a></li>
+                  <li><a href='/blog'>Customer Service</a></li>
+                  <li><a href='/blog'>New Collection</a></li>
+                  <li><a href='/blog'>Best Sellers</a></li>
+                  <li><a href='/blog'>Manufacturers</a></li>
+                  <li><a href='/blog'>Privacy policy</a></li>
+                  <li><a href='/blog'>Terms & Condition</a></li>
+                  <li><a href='/blog'>Blog</a></li>
+              </ul>
+          </div>
+          <div class='col-md-4 col-sm-2 col-xs-6'>
+            <h4>Stay in Touch</h4>
+              <ul>
+                  <li><a href='about.html'>Customer Service</a></li>
+                  <li><a href='contact.html'>Search Terms</a></li>
+                  <li><a href='/blog'>Advanced Search</a></li>
+                  <li><a href='/blog'>Orders and Returns</a></li>
+                  <li><a href='/blog'>Contact Us</a></li>
+                  <li><a href='/blog'>RSS</a></li>
+                  <li><a href='/blog'>Help & FAQs</a></li>
+                  <li><a href='/blog'>Consultant</a></li>
+                  <li><a href='/blog'>Store Locations</a></li>
+              </ul>
+          </div>
+          <div class='col-md-3 col-md-offset-1 col-sm-4 col-xs-6'>
+            <h4>STAY CONNECTED</h4>
+              <ul>
+                <i class="fa fa-facebook" style: font-size:"16px" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-pinterest" aria-hidden="true"></i>
+              </ul>
+          </div>
+      </div>
+</footer>
 
+<script>
+  var app = angular.module('shophiaApp', []);
+  app.controller('shophiaController', ['$scope','$rootScope', function($scope,$rootScope) {
 
-  </body>
+    $scope.test = 5;
+
+    var imagenes = [
+    {
+      url:"img/collection1.jpg",
+      porcentaje: 20,
+      tienePorcentaje: true
+    },
+    {
+      url:"img/collection2.jpg",
+      porcentaje: 0,
+      tienePorcentaje: false
+    },
+    {
+      url:"img/collection3.jpg",
+      porcentaje: 0,
+      tienePorcentaje: false
+    },
+    {
+      url:"img/collection4.jpg",
+      porcentaje: 40,
+      tienePorcentaje: true
+    },
+    {
+      url:"img/collection5.jpg",
+      porcentaje: 20,
+      tienePorcentaje: true
+    },
+    {
+      url:"img/collection6.jpg",
+      porcentaje: 0,
+      tienePorcentaje: false
+    },
+    {
+      url:"img/collection7.jpg",
+      porcentaje: 0,
+      tienePorcentaje: false
+    },
+    {
+      url:"img/collection8.jpg",
+      porcentaje: 40,
+      tienePorcentaje: true
+    }
+
+    ];
+    console.log(imagenes);
+    $scope.imagenes = imagenes;
+  }]);
+</script>
+</body>
 </html>

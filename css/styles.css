@@ -1,57 +1,133 @@
 
-
-.navegacion {
-
-
-
-  margin-top: 10px;
-  margin-bottom: 10px;
-
+@font-face {
+  font-family: logo;
+  src: url(KrinkesDecorPERSONAL.ttf);
 }
 
 
-a {
-  text-decoration: none;
-  @text-color: @black-50;
+/* NAV */
 
+.nav1 .nav-right > a {
+  font-size: 1.3em;
+  font-family: "Lato" sans-serif;
+  color: #000;
+  text-decoration: none;
+  padding: 0.5em;
 }
-.navegacion2 {
 
-
+.nav1 .nav-left > a {
+  font-size: 1.3em;
+  font-family: "Lato" sans-serif;
+  color: #000;
   text-decoration: none;
+  padding: 0.5em;
+}
 
+.nav2 .nav-left > a {
+  font-family: PlayfairDisplay;
+  font-style: italic;
+  font-size: 1.5em;
+  color: #000;
+  text-decoration: none;
+  padding: 0.5em;
 }
 
 .logo {
 
+  font-family: logo;
+  font-size: 80px;
   text-align: center;
 }
 
-
 .social {
 
+  font-size: 20px;
+}
+
+/* TITLE SECTION */
+
+.title-section {
+  margin-top: 6em;
+}
+
+.title {
   text-align: center;
+  font-family: PlayfairDisplay;
+  font-style: italic;
+  font-size: 2em;
+  padding-left: 2em;
   padding-right: 2em;
+}
+
+
+.title-contain {
+
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.rombo {
+
+  width: 1em;
+  height: 1em;
+  background: #d9bf8f;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  align-self: center;
+}
+
+/*SLIDER*/
+
+.slider-container {
+  margin:0;
 }
 
 .slider  {
   text-align: center;
-
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
+.slider-container > .slider > img {
+
+  display: block;
+  line-height: 1;
+}
+
+img {
+
+  width: auto\9;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
 
 /* ARTICULOS */
 
 .articulos {
   display: flex;
   justify-content: center;
-  margin-top: 120px;
-
+  margin-top: 60px;
 }
  .div1 , .div3 {
   display: flex;
   flex-direction: column;
- }
+}
+
+.div1-child2 {
+  padding-top: 1.35em;
+}
+
+.div3-child2 {
+  padding-top: 1.35em;
+}
 
 /* COLLECTION */
 
@@ -59,21 +135,111 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2em;
-
+  margin-top: 60px;
 }
 
-.fila1 , .fila2 {
+.fila1  {
   display: flex;
-  padding: 1em;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: 0.5em;
   justify-items: center;
-
 }
 
-.collection-1 , .collection-2 ,
-.collection-3 , .collection-4 ,
-.collection-5 , .collection-6 ,
-.collection-7 , ..collection-8 {
+.collection-1 {
+  padding-right: 1em;
+}
 
+.fila  {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2em;
+  justify-items: center;
+}
 
+/* BRAND */
+
+.brand-1 {
+  padding-right: 6em;
+}
+
+/* DESCUENTO */
+
+.descuento {
+  position: relative;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  top: -330px;
+  background: #feab12;
+  left:220px;
+  text-align: center;
+}
+
+.add-cart {
+  position: absolute;
+  background: rgba(0,0,0,0.75);
+  color: white;
+  padding: 10px 20px;
+  opacity: 0;
+  left: 25%;
+  bottom: 13%;
+  transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition:    all 0.6s ease;
+  -o-transition:      all 0.6s ease;
+}
+
+.collection-1:hover .add-cart {
+  opacity: 1;
+  bottom:  14.8%;
+}
+
+.collection-1 {
+  position: relative;
+  overflow: hidden;
+}
+
+.collection>.fila-1>.collection-1>.descuento>span {
+  font-family: "Lato";
+  font-style: bold;
+}
+
+/*EFFECT HOVER */
+
+img:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+/* TESTIMONIAL SECTION*/
+
+.testimonial-section {
+  background:#d9bf8f;
+  width: 100%;
+  height: 400px;
+  margin:0;
+  margin-top: 60px;
+  text-align: center;
+}
+
+/*FOOTER*/
+
+.footer-background {
+  background: #000;
+  height: 100%;
+  padding-top: 2.5em;
+}
+
+footer h4 {
+  font-family:"Lato";
+  color: white;
+}
+
+footer ul li a {
+
+  font-family:"Lato";
+  font-style: normal;
+  font-size: 13px;
+  color: #efefef;
 }
